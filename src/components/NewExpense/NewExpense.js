@@ -1,6 +1,6 @@
-import "./NewExpense.css";
-import ExpenseForm from "./ExpenseForm";
-import { useState } from "react";
+import './NewExpense.css';
+import ExpenseForm from './ExpenseForm';
+import { useState } from 'react';
 
 function NewExpense(props) {
   const [showButton, setShowButton] = useState(true);
@@ -23,7 +23,10 @@ function NewExpense(props) {
       {showButton ? (
         <button onClick={buttonHandler}>Add New Expense</button>
       ) : (
-        <ExpenseForm onSave={onSaveHandler} onCancel={buttonHandler}/>
+        <ExpenseForm
+          onSave={onSaveHandler}
+          onCancel={buttonHandler}
+        />
       )}
     </div>
   );

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import "./ExpenseForm.css";
+import { useState } from 'react';
+import './ExpenseForm.css';
 
 function ExpenseForm(props) {
   // Individual states per field
@@ -9,9 +9,9 @@ function ExpenseForm(props) {
 
   // One state with a single object
   const [input, setUserInput] = useState({
-    title: "",
-    amount: "",
-    date: new Date().toISOString().split("T")[0],
+    title: '',
+    amount: '',
+    date: new Date().toISOString().split('T')[0],
   });
 
   const onChangeHandler = (action, event) => {
@@ -33,9 +33,9 @@ function ExpenseForm(props) {
     };
 
     setUserInput({
-      date: new Date().toISOString().split("T")[0],
-      title: "",
-      amount: "",
+      date: new Date().toISOString().split('T')[0],
+      title: '',
+      amount: '',
     });
 
     props.onSave(expenseDate);
@@ -48,7 +48,7 @@ function ExpenseForm(props) {
           <label>Title</label>
           <input
             type="text"
-            onChange={(event) => onChangeHandler("title", event)}
+            onChange={(event) => onChangeHandler('title', event)}
             value={input.title}
           />
         </div>
@@ -58,7 +58,9 @@ function ExpenseForm(props) {
             type="number"
             min="0.01"
             step="0.01"
-            onChange={(event) => onChangeHandler("amount", event)}
+            onChange={(event) =>
+              onChangeHandler('amount', event)
+            }
             value={input.amount}
           />
         </div>
@@ -68,13 +70,15 @@ function ExpenseForm(props) {
             type="date"
             min="2019-01-01"
             max="2021-12-31"
-            onChange={(event) => onChangeHandler("date", event)}
+            onChange={(event) => onChangeHandler('date', event)}
             value={input.date}
           />
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="button" onClick={props.onCancel}>Cancel</button>
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
