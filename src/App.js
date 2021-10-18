@@ -15,7 +15,7 @@ function App() {
       id: "e2",
       title: "Mouse",
       amount: 350.21,
-      date: new Date(2021, 5, 27),
+      date: new Date(2020, 5, 27),
     },
     {
       id: "e3",
@@ -31,8 +31,6 @@ function App() {
     setList((prevState) => {
       return [data, ...prevState];
     });
-
-    console.log(expenseList.length);
   };
 
   return (
