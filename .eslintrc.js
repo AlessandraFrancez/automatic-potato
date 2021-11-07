@@ -12,7 +12,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:react/jsx-runtime'
+    // 'plugin:react/jsx-runtime'
   ],
   parserOptions: {
     ecmaVersion: 2017,
@@ -35,7 +35,8 @@ module.exports = {
     'no-path-concat': OFF,
     'no-unused-expressions': OFF,
     'no-multi-str': OFF,
-    'react/prop-types': 0
+    'react/prop-types': 0,
+    'react/react-in-jsx-scope': 0
   },
   globals: {
     Promise: true,
